@@ -48,7 +48,7 @@ For user authentication, the application uses JWT token authentication. Below ar
 
 The repository is organized into three microservices folders:
 
-- [bankAccount/](microservices/bankAccount) - Bank Account Microservice
+- [bankAccount/](microservices/bankAccount) - Bank Account Microservice (For latest is in microservice-version3)
 - [transaction/](microservices/transaction) - Transaction Microservice
 - [user/](microservices/user) - User Microservice
 
