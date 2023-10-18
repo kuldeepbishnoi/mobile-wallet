@@ -6,6 +6,10 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://www.docker.com/)
 [![Docker Hub](https://img.shields.io/badge/Docker%20Hub-Ready-blue)](https://hub.docker.com/)
 [![JWT Authentication](https://img.shields.io/badge/JWT%20Authentication-Feature-brightgreen)](https://jwt.io/)
+[![API Gateway](https://img.shields.io/badge/API%20Gateway-Feature-blue)](https://your-api-gateway-url-here)
+[![Redis](https://img.shields.io/badge/Redis-Feature-red)](https://redis.io/)
+[![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-Feature-red)](https://kafka.apache.org/)
+
 
 This repository contains a Payment Wallet microservices application with three microservices:
 
