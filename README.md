@@ -15,21 +15,30 @@ This repository contains a Payment Wallet microservices application with three m
 
 1. **Bank Account Microservice**
    - Docker Image: [kuldeepbishnoi/mobilewallet-bankaccount](https://hub.docker.com/r/kuldeepbishnoi/mobilewallet-bankaccount)
-   - API Endpoint: [http://34.122.112.133:8002/api/v1/](http://34.122.112.133:8002/api/v1/)    
+   - API Endpoint: Through User API Gateway   
 
 2. **Transaction Microservice**
    - Docker Image: [kuldeepbishnoi/mobilewallet-transaction](https://hub.docker.com/r/kuldeepbishnoi/mobilewallet-transaction)
-   - API Endpoint: [http://34.170.15.243:8001/api/v1/](http://34.170.15.243:8001/api/v1/)
+   - API Endpoint: Through User API Gateway
 
 3. **User Microservice**
    - Docker Image: [kuldeepbishnoi/mobilewallet-user](https://hub.docker.com/r/kuldeepbishnoi/mobilewallet-user)
-   - API Endpoint: [http://34.16.9.34:8000/api/v1/](http://34.16.9.34:8000/api/v1/)
+   - API Endpoint: [http://34.171.215.205:8000/api/v1/](http://34.171.215.205:8000/api/v1/)
+      - /login: POST Mapping & {"username": "9485749097", "password": "12345Six"}
+      - /balance: GET Mapping & using JWT token that you will receive when you login
+      - /wallet: GET Mapping & using JWT token that you will receive when you login
+      - /transaction: POST Mapping & {"amount":"70", "toWalletId":"6"}
+         - Internal Working:
+            - Amount will be blocked
+            - if unsucessfull then unblocked
+            - if successfull then dedcuted
+      - /bankaccount: POST Mapping & {"bankName": "PNB", "ifsc": "2494009909009", "accountNo": "24940079798888"}
 
 ## Application Architecture
 
 ![Entity-Relationship Diagram](images/architecture.png)
 
-The application's database is deployed on Amazon Web Services (AWS). **The code of this is in microservice version 3 folder. The deployed version don't use API Gateway, Kafka, Redis is deployed and its link is available above**.
+The application's database is deployed on Amazon Web Services (AWS). And Application is deployed on Google Cloud.
 
 ## Database Relation
 
@@ -44,6 +53,6 @@ For user authentication, the application uses JWT token authentication. Below ar
 ![Login](images/login.png)
 ![Registration](images/register.png)
 
-## Kubernetes Deployment
+## Deployment
 
 For scalability and management I have used  kubernetes.
