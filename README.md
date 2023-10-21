@@ -29,7 +29,7 @@ This repository contains a Payment Wallet microservices application with three m
 
 ![Entity-Relationship Diagram](images/architecture.png)
 
-The application's database is deployed on Amazon Web Services (AWS). **This is still @ local machine and will be deployed soon other architecture that don't use API Gateway, Kafka, Redis is deployed and its link is available above**.
+The application's database is deployed on Amazon Web Services (AWS). **The code of this is in microservice version 3 folder. The deployed version don't use API Gateway, Kafka, Redis is deployed and its link is available above**.
 
 ## Database Relation
 
@@ -43,16 +43,6 @@ For user authentication, the application uses JWT token authentication. Below ar
 
 ![Login](images/login.png)
 ![Registration](images/register.png)
-
-## Microservices and Docker Files
-
-The repository is organized into three microservices folders:
-
-- [bankAccount/](microservices/bankAccount) - Bank Account Microservice (For latest is in microservice-version3)
-- [transaction/](microservices/transaction) - Transaction Microservice
-- [user/](microservices/user) - User Microservice
-
-You can find the jar file(embedded server) and corresponding source code for each microservice in their respective folders.
 
 ## Kubernetes Deployment
 
