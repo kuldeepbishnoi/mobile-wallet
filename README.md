@@ -32,7 +32,7 @@ This repository contains a Payment Wallet microservices application with three m
             - Amount will be blocked
             - if unsucessfull then unblocked
             - if successfull then dedcuted
-      - /bankaccount: POST Mapping & {"bankName": "PNB", "ifsc": "2494009909009", "accountNo": "24940079798888"}
+      - /bankaccount: POST Mapping & {"bankName": "", "ifsc": "", "accountNo": ""}
       - /register: POST Mapping & {"firstName": "","lastName": "","mobileNo": "","email": "","password": ""}
 
 ## Application Architecture
